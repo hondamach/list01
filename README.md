@@ -13,16 +13,22 @@ OUTPUT
 Xuất ra danh sách các điểm đã được sắp xếp theo hoành độ và tung độ.
 
 EXAMPLE
-Input	                                                                     
+
+Input	      
+
 3
 2 6
 1 2
 2 4	
+
 Output   
+
 (1,2)
 (2,4)
 (2,6)
+
 Input	 
+
 7
 1 1
 2 2
@@ -31,7 +37,9 @@ Input
 -9 2
 9 0
 5 0
-Output                                
+
+Output    
+
 (-9,2)
 (-2,2)
 (1,1)
