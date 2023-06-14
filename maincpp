@@ -55,9 +55,29 @@ void CreateList(List &L)
     }
 
 }
-void sort()
-void PrintList(List &L)
+bool sosanhbehon(node* a,node *b)
+{   if (a->info.x == b->info.x) return a->info.y < b->info.y;
+    else return a->info.x < b->info.x;
+
+}
+void insertionsort(List &L)
 {
+    node* i =L.head;
+    while (i != NULL)
+        {
+           node* min =i;
+            for (node* j = i->next; j != NULL; j=j->next)
+            {
+                if (sosanhbehon( j, min) ) min=j;
+            }
+            point temp = i->info;
+            i->info =min ->info;
+            min->info =temp ;
+            i=i->next;
+        }
+}
+void PrintList(List &L)
+{   insertionsort(L);
     for (auto p =L.head; p != NULL; p = p->next)
     {
         cout<< "(" << p->info.x<< "," << p->info.y<<")\n";
