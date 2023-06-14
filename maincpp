@@ -60,7 +60,7 @@ bool sosanhbehon(node* a,node *b)
     else return a->info.x < b->info.x;
 
 }
-void insertionsort(List &L)
+void selectionsort(List &L)
 {
     node* i =L.head;
     while (i != NULL)
@@ -77,7 +77,7 @@ void insertionsort(List &L)
         }
 }
 void PrintList(List &L)
-{   insertionsort(L);
+{   selectionsort(L);
     for (auto p =L.head; p != NULL; p = p->next)
     {
         cout<< "(" << p->info.x<< "," << p->info.y<<")\n";
